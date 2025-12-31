@@ -3,6 +3,7 @@ name: Clean ESA Versions on Main
 on:
   push:
     branches: [ main ]
+workflow_dispatch:
 
 permissions:
   contents: read
