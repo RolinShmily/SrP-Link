@@ -21,13 +21,7 @@ jobs:
 
       # 配置阿里云CLI
       - name: Configure Aliyun CLI
-        run: |
-          aliyun configure set \
-            --profile AkProfile \
-            --mode AK \
-            --access-key-id ${{ secrets.ALIYUN_ACCESS_KEY_ID }} \
-            --access-key-secret ${{ secrets.ALIYUN_ACCESS_KEY_SECRET }} \
-            --region "cn-hangzhou"
+        run: aliyun configure set --profile AkProfile --mode AK --access-key-id "${{ secrets.ALIYUN_ACCESS_KEY_ID }}" --access-key-secret "${{ secrets.ALIYUN_ACCESS_KEY_SECRET }}" --region cn-hangzhou
 
       # 获取Pages名称（可配置）
       - name: Get Pages Name
